@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>Travelport TPF Code Accelerator</title>
+    <link rel="stylesheet" href="jquery/css/start/jquery-ui-1.10.3.custom.css" />
+  <script src="jquery/js/jquery-1.9.1.js"></script>
+  <script src="jquery/js/jquery-ui-1.10.3.custom.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <script>
+  $(function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "fold",
+        duration: 1000
+      }
+    });
+ 
+    $( "#opener" ).click(function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  });
+  </script>
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+ <div class="container">
+  <div id="accordion">
+	<h3>Assemble Program</h3>
+	<div>
+      <div id="dialog" title="main()">
+			<p><textarea class="form-control" rows="8"></textarea></p>
+			<p><!-- Single button -->
+				<div class="btn-group">
+				  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+					Includes <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu">
+					<li><a href="#">#tpds.h</a></li>
+					<li><a href="#">#string.h</a></li>
+					<li><a href="#">#structs.h</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Full Menu</a></li>
+				  </ul>
+				</div></p>
+	  </div>
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Initiate Program</h2>
+        <input type="text" class="form-control" placeholder="Program Name" autofocus>
+        <input type="password" class="form-control" placeholder="Editor Name">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> New Program?
+        </label>
+        <a href="#" id="opener" class="btn btn-primary btn-lg disabled">Open Segment</a> <!-- <button id="opener">Open Segment</button> -->
+      </form>
+    </div>
+    <h3>Generated Code</h3>
+  <div>
+    <p>
+    <p><textarea class="form-control" rows="30"></textarea></p>
+    </p>
+  </div>
+  </div>  <!-- /accordion -->	  
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	  <script src="dist/js/bootstrap.min.js"></script>
+      <script>
+		$(function() {
+		$( "#accordion" ).accordion();
+		});
+	  </script>
+</body>
+</html>
